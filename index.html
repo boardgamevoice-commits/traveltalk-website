@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelTalk (开口游) — Offline Travel Phrasebook, Dialogue Simulator & Voice Translator</title>
+  <meta name="description" content="Speak confidently in Japan, France, and English destinations 100% offline. 21 interactive travel scenarios, Top 100 survival cheatsheet, full-screen staff show cards, and two-way voice translation.">
+  <meta property="og:title" content="TravelTalk: Speak & Translate — v1.0 for iOS">
+  <meta property="og:description" content="100% offline travel conversation simulator, Top 100 survival phrasebook, dietary allergy show cards, and two-way voice translator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://traveltalkapp.netlify.app">
+  <meta property="og:image" content="https://traveltalkapp.netlify.app/assets/app_icon.png">
+  <link rel="icon" type="image/png" href="assets/app_icon.png">
+  <link rel="apple-touch-icon" href="assets/app_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TravelTalk: Speak & Translate",
+    "alternateName": "开口游 TravelTalk",
+    "operatingSystem": "iOS 18.0+",
+    "applicationCategory": "TravelApplication",
+    "softwareVersion": "1.0",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand-link">
+        <img src="assets/app_icon.png" alt="TravelTalk App Icon" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-title">TravelTalk <span data-lang-zh>开口游</span></span>
+          <span class="brand-sub">v1.0 · Offline Travel Companion</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#features"><span data-lang-en>Features</span><span data-lang-zh>核心亮点</span></a>
+        <a href="#screens"><span data-lang-en>Screenshots</span><span data-lang-zh>应用预览</span></a>
+        <a href="/privacy"><span data-lang-en>Privacy</span><span data-lang-zh>隐私政策</span></a>
+        <a href="/terms"><span data-lang-en>Terms</span><span data-lang-zh>服务条款</span></a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+          <button type="button" class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill-row">
+            <span class="badge-pill">v1.0 Release · iOS 18+</span>
+            <span class="badge-pill coral"><span data-lang-en>100% Offline Ready</span><span data-lang-zh>100% 离线可用</span></span>
+            <span class="badge-pill green"><span data-lang-en>Made for iPhone, iPad &amp; iPhone Duo</span><span data-lang-zh>适配 iPhone / iPad / iPhone Duo</span></span>
+          </div>
+
+          <h1>
+            <span data-lang-en>Speak confidently anywhere you land — even in airplane mode.</span>
+            <span data-lang-zh>落地海外没信号，也能自信开口地道交流。</span>
+          </h1>
+
+          <p class="hero-lead">
+            <span data-lang-en>Rehearse 21 branching real-life scenarios with studio neural voices, flash Full-Screen Dietary &amp; Emergency Show Cards with tap-to-reply buttons for local staff, and converse effortlessly with our on-device Two-Way Voice Translator.</span>
+            <span data-lang-zh>集「21个高频场景双向对话预演 + 必背100句罗马音小抄 + 店员点选全屏救急卡 + 端侧双麦克风实时语音互译」于一体，零账号、零广告、零云端上传。</span>
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#studio" class="btn-primary">
+              <span data-lang-en>Try Interactive Boarding Pass Lab</span>
+              <span data-lang-zh>体验交互式登机牌急救卡</span>
+            </a>
+            <a href="/privacy" class="btn-secondary">
+              <span data-lang-en>100% On-Device Privacy</span>
+              <span data-lang-zh>查看端侧隐私承诺</span>
+            </a>
+          </div>
+
+          <div class="trust-strip">
+            <div class="trust-stat">
+              <strong>21</strong>
+              <span data-lang-en>Branching Scenarios</span>
+              <span data-lang-zh>真实出境演练场景</span>
+            </div>
+            <div class="trust-stat">
+              <strong>234</strong>
+              <span data-lang-en>Bundled Neural Voices</span>
+              <span data-lang-zh>内置高清真声语音</span>
+            </div>
+            <div class="trust-stat">
+              <strong>0 KB</strong>
+              <span data-lang-en>Cloud Data Collected</span>
+              <span data-lang-zh>个人数据云端上传</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Boarding Pass & Dietary Show Card Studio -->
+        <div class="ticket-card" id="studio">
+          <div class="ticket-header">
+            <div>
+              <div class="ticket-sub"><span data-lang-en>BOARDING PASS · LIVE DEMO</span><span data-lang-zh>旅行护照 · 实时交互预览</span></div>
+              <div class="ticket-route-code" id="demo-route-code">HND · TOKYO</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="ticket-sub"><span data-lang-en>OFFLINE ENGINE</span><span data-lang-zh>离线引擎状态</span></div>
+              <div style="font-weight: 800; font-size: 0.9rem;">READY · 1.0x / 0.75x</div>
+            </div>
+          </div>
+
+          <div class="ticket-body">
+            <span class="control-label"><span data-lang-en>1. Destination Language</span><span data-lang-zh>1. 选择目的地语言</span></span>
+            <div class="chip-group">
+              <button type="button" class="chip-btn active" data-dest="ja" onclick="selectDest('ja')">🇯🇵 Japanese · 日语</button>
+              <button type="button" class="chip-btn" data-dest="fr" onclick="selectDest('fr')">🇫🇷 French · 法语</button>
+              <button type="button" class="chip-btn" data-dest="en" onclick="selectDest('en')">🇺🇸 English · 英语</button>
+            </div>
+
+            <span class="control-label"><span data-lang-en>2. Passport Dietary &amp; Situation Slot</span><span data-lang-zh>2. 选择旅行护照忌口 / 高频救急场景</span></span>
+            <div class="chip-group">
+              <button type="button" class="chip-btn dietary active" data-slot="peanut" onclick="selectSlot('peanut')">
+                <span data-lang-en>Peanut Allergy</span><span data-lang-zh>花生坚果过敏</span>
+              </button>
+              <button type="button" class="chip-btn dietary" data-slot="cilantro" onclick="selectSlot('cilantro')">
+                <span data-lang-en>No Cilantro</span><span data-lang-zh>免放香菜</span>
+              </button>
+              <button type="button" class="chip-btn dietary" data-slot="bill" onclick="selectSlot('bill')">
+                <span data-lang-en>Check Please</span><span data-lang-zh>买单结账</span>
+              </button>
+            </div>
+
+            <hr class="ticket-divider">
+
+            <div class="live-card-output">
+              <div class="live-mother-tongue" id="demo-meaning">Table for 2. I have a severe peanut &amp; nut allergy.</div>
+              <div class="live-target-phrase" id="demo-target">2名です。重度のピーナッツ・ナッツアレルギーがあります。</div>
+              <div class="live-romaji" id="demo-romaji">Ni-mei desu. Judo no pinattsu nattsu arerugi ga arimasu.</div>
+            </div>
+
+            <div class="ticket-actions">
+              <button type="button" class="action-btn speak" onclick="speakDemoPhrase()">
+                <span data-lang-en>🔊 Play Pronunciation</span><span data-lang-zh>🔊 播放地道发音</span>
+              </button>
+              <button type="button" class="action-btn showcard" onclick="toggleStaffBox()">
+                <span data-lang-en>🪪 Staff Tap-to-Reply</span><span data-lang-zh>🪪 店员点选回复</span>
+              </button>
+            </div>
+
+            <div class="staff-reply-box" id="staff-box">
+              <div style="font-size: 0.8rem; font-weight: 800; color: var(--brand-green);" id="staff-prompt">
+                Local Staff Tap Reply — Instant Mother-Tongue Confirmation:
+              </div>
+              <div class="staff-reply-btns">
+                <button type="button" class="staff-chip" onclick="showStaffMeaning('ok')">✅ 大丈夫です / Understood</button>
+                <button type="button" class="staff-chip" onclick="showStaffMeaning('wait')">⏳ 少々お待ちください / One moment</button>
+              </div>
+              <div id="staff-feedback" style="margin-top: 8px; font-size: 0.84rem; font-weight: 700; color: var(--text-primary);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>
+            <span data-lang-en>Engineered for High-Pressure Travel Moments</span>
+            <span data-lang-zh>专为真实出境高频痛点打造</span>
+          </h2>
+          <p>
+            <span data-lang-en>From Tokyo ramen counters and Kyoto ryokans to Paris bistros and airport immigration desks.</span>
+            <span data-lang-zh>无论是东京一兰拉面点单、羽田海关问询，还是巴黎小酒馆防过敏沟通，断网也能秒级应对。</span>
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card">
+            <div class="bento-icon">01</div>
+            <h3><span data-lang-en>Branching Dialogue Simulator</span><span data-lang-zh>21个真实场景双向对话树</span></h3>
+            <p>
+              <span data-lang-en>Don't just memorize one line — hear how local waiters, clerks, and customs officers reply across polite &amp; casual branches, with 1.0x and 0.75x slow neural audio.</span>
+              <span data-lang-zh>不仅教你怎么说，更提前预演店员最常见的真实追问分支；内置234条高清离线语音，支持1.0x常速与0.75x慢速跟读打分。</span>
+            </p>
+          </article>
+
+          <article class="bento-card">
+            <div class="bento-icon">02</div>
+            <h3><span data-lang-en>Top 100 Cheatsheet &amp; Show Cards</span><span data-lang-zh>必背100句小抄与全屏救急卡</span></h3>
+            <p>
+              <span data-lang-en>100 atomic 4–8 word phrases with Romaji and phonetic guides. Flip any card full-screen in noisy venues so local staff can read and tap a reply button directly.</span>
+              <span data-lang-zh>一句一卡短句编排搭配罗马音与谐音助记；嘈杂环境下轻点切换高对比度全屏大字卡，支持当地店员直接点击按钮回复。</span>
+            </p>
+          </article>
+
+          <article class="bento-card">
+            <div class="bento-icon">03</div>
+            <h3><span data-lang-en>Symmetrical Dual-Mic Translator</span><span data-lang-zh>单手双麦克风端侧实时互译</span></h3>
+            <p>
+              <span data-lang-en>Thumb-zone dual microphones powered by Apple on-device Speech Recognition, iOS 18 TranslationSession, and our deterministic offline travel lexicon.</span>
+              <span data-lang-zh>底部人体工学对称双麦（「我说母语 / 对方说外语」），融合 iOS 18 离线翻译引擎与内置高频旅行词库双轨兜底。</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screens">
+      <div class="container">
+        <div class="section-header">
+          <h2>
+            <span data-lang-en>Crafted for iPhone, iPad &amp; iPhone Duo</span>
+            <span data-lang-zh>多端自适应原生界面预览</span>
+          </h2>
+          <p>
+            <span data-lang-en>Toggle EN / 中文 in the top navigation bar to preview localized English and Simplified Chinese interfaces.</span>
+            <span data-lang-zh>点击右上角 EN / 中文 按钮，即可实时切换中英文原生界面截图。</span>
+          </p>
+        </div>
+
+        <div class="screens-grid">
+          <div class="screen-item">
+            <img src="assets/screens/raw_01_dialogue.png" data-en-src="assets/screens/raw_01_dialogue.png" data-zh-src="assets/screens/raw_01_dialogue_zh.png" alt="Interactive Dialogue Simulation" class="localized-screen">
+            <div class="screen-caption"><span data-lang-en>1. Interactive Dialogue Tree</span><span data-lang-zh>1. 双向对话模拟演练</span></div>
+          </div>
+          <div class="screen-item">
+            <img src="assets/screens/raw_02_cheatsheet.png" data-en-src="assets/screens/raw_02_cheatsheet.png" data-zh-src="assets/screens/raw_02_cheatsheet_zh.png" alt="Top 100 Survival Cheatsheet" class="localized-screen">
+            <div class="screen-caption"><span data-lang-en>2. Top 100 Cheatsheet &amp; Cards</span><span data-lang-zh>2. 必背100句与救急展示卡</span></div>
+          </div>
+          <div class="screen-item">
+            <img src="assets/screens/raw_03_translator.png" data-en-src="assets/screens/raw_03_translator.png" data-zh-src="assets/screens/raw_03_translator_zh.png" alt="Two-Way Live Voice Translator" class="localized-screen">
+            <div class="screen-caption"><span data-lang-en>3. Two-Way Offline Translator</span><span data-lang-zh>3. 双麦克风离线实时翻译</span></div>
+          </div>
+          <div class="screen-item">
+            <img src="assets/screens/raw_04_passport.png" data-en-src="assets/screens/raw_04_passport.png" data-zh-src="assets/screens/raw_04_passport_zh.png" alt="Travel Passport & Allergy Guard" class="localized-screen">
+            <div class="screen-caption"><span data-lang-en>4. Travel Passport &amp; Allergy Guard</span><span data-lang-zh>4. 旅行护照与防过敏名片</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>TravelTalk: Speak &amp; Translate (开口游) · v1.0</strong>
+        <div style="margin-top: 4px;">
+          <span data-lang-en>100% On-Device Sandbox · Zero Ads · Zero Data Collection · Support: </span>
+          <span data-lang-zh>100% 设备端沙盒运行 · 无广告 · 零数据收集 · 官方支持邮箱：</span>
+          <a href="mailto:fangdev1063@gmail.com" style="text-decoration: underline;">fangdev1063@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="/privacy"><span data-lang-en>Privacy Policy</span><span data-lang-zh>隐私政策</span></a>
+        <a href="/terms"><span data-lang-en>Terms of Use</span><span data-lang-zh>服务条款</span></a>
+        <a href="mailto:fangdev1063@gmail.com"><span data-lang-en>Contact Support</span><span data-lang-zh>联系开发者</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const DEMO_DATA = {
+      ja: {
+        route: 'HND · TOKYO',
+        bcp47: 'ja-JP',
+        peanut: {
+          en: 'Table for 2. I have a severe peanut & nut allergy.',
+          zh: '我们两位用餐。我有严重的花生与坚果过敏。',
+          target: '2名です。重度のピーナッツ・ナッツアレルギーがあります。',
+          romaji: 'Ni-mei desu. Judo no pinattsu nattsu arerugi ga arimasu.'
+        },
+        cilantro: {
+          en: 'Could you please make this without cilantro?',
+          zh: '请问这道菜可以不放香菜吗？谢谢。',
+          target: 'すみません、パクチー抜きでお願いできますか？',
+          romaji: 'Sumimasen, pakuchi nuki de onegai dekimasu ka?'
+        },
+        bill: {
+          en: 'Excuse me, could we get the check please?',
+          zh: '不好意思，麻烦帮我们买单结账。',
+          target: 'すみません、お会計をお願いします。',
+          romaji: 'Sumimasen, okaikei wo onegaishimasu.'
+        }
+      },
+      fr: {
+        route: 'CDG · PARIS',
+        bcp47: 'fr-FR',
+        peanut: {
+          en: 'Table for 2. I have a severe peanut & nut allergy.',
+          zh: '我们两位用餐。我有严重的花生与坚果过敏。',
+          target: 'Une table pour deux. J’ai une allergie sévère aux arachides et aux fruits à coque.',
+          romaji: 'Oon tabl poor duh. Zhay oon a-ler-zhee say-ver oh za-ra-sheed.'
+        },
+        cilantro: {
+          en: 'Could you please prepare this without cilantro?',
+          zh: '请问这道菜可以不放香菜吗？谢谢。',
+          target: 'Pourriez-vous préparer ce plat sans coriandre, s’il vous plaît ?',
+          romaji: 'Poo-ryay voo pray-pa-ray se pla san ko-ryandr, seel voo play?'
+        },
+        bill: {
+          en: 'Excuse me, could we have the bill please?',
+          zh: '不好意思，麻烦帮我们买单结账。',
+          target: 'Excusez-moi, l’addition s’il vous plaît.',
+          romaji: 'Ex-ku-zay mwa, la-dee-syon seel voo play.'
+        }
+      },
+      en: {
+        route: 'JFK · NEW YORK',
+        bcp47: 'en-US',
+        peanut: {
+          en: 'Table for 2. I have a severe peanut and tree nut allergy.',
+          zh: '我们两位用餐。我有严重的花生与坚果过敏。',
+          target: 'Table for two, please. I have a severe peanut and tree nut allergy.',
+          romaji: 'Clear polite American English · Dining Allergy Alert'
+        },
+        cilantro: {
+          en: 'Could I get this without cilantro, please?',
+          zh: '请问这道菜可以不放香菜吗？谢谢。',
+          target: 'Could I get this without cilantro, please?',
+          romaji: 'Clear polite American English · Dietary Customization'
+        },
+        bill: {
+          en: 'Excuse me, could we get the check whenever you are ready?',
+          zh: '不好意思，麻烦帮我们买单结账。',
+          target: 'Excuse me, could we get the check, please?',
+          romaji: 'Clear polite American English · Restaurant Checkout'
+        }
+      }
+    };
+
+    let currentLang = 'en';
+    let currentDest = 'ja';
+    let currentSlot = 'peanut';
+
+    function renderDemo() {
+      const d = DEMO_DATA[currentDest];
+      const item = d[currentSlot];
+      document.getElementById('demo-route-code').textContent = d.route;
+      document.getElementById('demo-meaning').textContent = currentLang === 'zh' ? item.zh : item.en;
+      document.getElementById('demo-target').textContent = item.target;
+      document.getElementById('demo-romaji').textContent = item.romaji;
+      document.getElementById('staff-feedback').textContent = '';
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.body.classList.toggle('lang-zh', lang === 'zh');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+      document.querySelectorAll('.localized-screen').forEach(img => {
+        img.src = lang === 'zh' ? img.getAttribute('data-zh-src') : img.getAttribute('data-en-src');
+      });
+      renderDemo();
+    }
+
+    function selectDest(dest) {
+      currentDest = dest;
+      document.querySelectorAll('[data-dest]').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-dest') === dest);
+      });
+      renderDemo();
+    }
+
+    function selectSlot(slot) {
+      currentSlot = slot;
+      document.querySelectorAll('[data-slot]').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-slot') === slot);
+      });
+      renderDemo();
+    }
+
+    function speakDemoPhrase() {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const d = DEMO_DATA[currentDest];
+      const u = new SpeechSynthesisUtterance(d[currentSlot].target);
+      u.lang = d.bcp47;
+      u.rate = 0.92;
+      window.speechSynthesis.speak(u);
+    }
+
+    function toggleStaffBox() {
+      document.getElementById('staff-box').classList.toggle('visible');
+    }
+
+    function showStaffMeaning(kind) {
+      const el = document.getElementById('staff-feedback');
+      if (kind === 'ok') {
+        el.textContent = currentLang === 'zh'
+          ? '店员已确认：「没问题，我们会为您妥善处理！」'
+          : 'Staff Confirmed: "No problem at all — we will take care of this for you!"';
+      } else {
+        el.textContent = currentLang === 'zh'
+          ? '店员回复：「请稍等片刻，我马上为您确认。」'
+          : 'Staff Replied: "One moment please — let me double-check with the kitchen."';
+      }
+    }
+  </script>
+</body>
+</html>

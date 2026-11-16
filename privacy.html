@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy (隐私政策) — TravelTalk v1.0</title>
+  <meta name="description" content="Official Privacy Policy for TravelTalk (开口游). 100% on-device sandbox architecture with zero data collection, zero accounts, and zero third-party ad tracking.">
+  <link rel="icon" type="image/png" href="assets/app_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+SC:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand-link">
+        <img src="assets/app_icon.png" alt="TravelTalk Icon" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-title">TravelTalk 开口游</span>
+          <span class="brand-sub">v1.0 · Privacy Policy</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="/">Home 首页</a>
+        <a href="/privacy" class="active">Privacy 隐私政策</a>
+        <a href="/terms">Terms 服务条款</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle">
+          <button type="button" class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+          <button type="button" class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-container">
+    <article class="legal-card">
+      <span class="badge-pill green" style="margin-bottom: 14px;">v1.0 · 100% On-Device Sandbox · Zero Data Collection</span>
+
+      <div data-lang-en>
+        <h1>Privacy Policy — TravelTalk: Speak &amp; Translate</h1>
+        <div class="legal-meta">
+          <strong>Effective Date:</strong> November 15, 2026 &nbsp;|&nbsp; <strong>Version:</strong> v1.0 &nbsp;|&nbsp; <strong>Support:</strong> <a href="mailto:fangdev1063@gmail.com">fangdev1063@gmail.com</a>
+        </div>
+
+        <h2>1. Core Privacy Architecture</h2>
+        <p><strong>TravelTalk: Speak &amp; Translate</strong> ("TravelTalk", Bundle ID <code>com.devfang.traveltalk</code>) is developed by Ce Fang with a strict privacy-by-design architecture. We do <strong>not</strong> collect, transmit, store on external servers, rent, or sell any personal data.</p>
+        <ul>
+          <li><strong>Zero Accounts:</strong> TravelTalk requires no registration, email address, phone number, or social login.</li>
+          <li><strong>Zero Third-Party Analytics or Advertising SDKs:</strong> TravelTalk integrates zero third-party tracking SDKs, zero advertising identifiers (IDFA / ATT), and zero behavioral analytics frameworks.</li>
+          <li><strong>100% Local On-Device Storage:</strong> Your Traveler Passport preferences (party size, dietary/allergy tags, optional nickname/origin), scenario progress, pinned favorites, saved vocabulary cards, and custom phrases are stored exclusively inside your device's local SwiftData &amp; <code>UserDefaults</code> sandbox (declared under Apple Privacy Manifest category <code>NSPrivacyAccessedAPICategoryUserDefaults</code> / <code>CA92.1</code>).</li>
+        </ul>
+
+        <h2>2. Microphone, Speech Recognition &amp; Translation Permissions</h2>
+        <p>TravelTalk requests system permissions strictly on demand only when you actively tap a voice practice or live translation button:</p>
+        <ul>
+          <li><strong>Microphone (<code>NSMicrophoneUsageDescription</code>) &amp; Speech Recognition (<code>NSSpeechRecognitionUsageDescription</code>):</strong> Used solely in real time via Apple's native <code>AVFoundation</code> and <code>Speech</code> frameworks to evaluate your spoken pronunciation in Dialogue Simulation or transcribe speech in the Live Translator. Voice audio is processed ephemerally in memory and is never recorded to persistent files or uploaded to developer servers.</li>
+          <li><strong>Translation (<code>NSTranslationUsageDescription</code>):</strong> Powered by Apple's native iOS 18 on-device <code>TranslationSession</code> framework and bundled offline travel lexicons so custom phrases work offline without internet access. If you are online and your device lacks an installed system translation pack for an unbundled phrase, standard anonymous translation queries may be processed transiently without any user identifier; no history is logged externally.</li>
+        </ul>
+
+        <h2>3. In-App Purchases &amp; StoreKit 2</h2>
+        <p>TravelTalk v1.0 launches as a 100% free experience. Any future optional Pro upgrades or expansion packs are processed exclusively by Apple via native <strong>StoreKit 2</strong>. We never have access to your Apple ID credentials, billing address, or payment card details.</p>
+
+        <h2>4. Data Deletion &amp; User Control</h2>
+        <p>Because all data resides locally on your iPhone or iPad, you maintain complete physical control at all times. You can edit or clear your Traveler Profile, custom phrases, and vocabulary directly inside the app, or delete the app from iOS to permanently erase its local sandbox container.</p>
+
+        <h2>5. Contact Us</h2>
+        <p>If you have any questions regarding privacy or data protection, please contact the developer directly at <a href="mailto:fangdev1063@gmail.com"><strong>fangdev1063@gmail.com</strong></a>.</p>
+      </div>
+
+      <div data-lang-zh>
+        <h1>《开口游 TravelTalk》隐私政策</h1>
+        <div class="legal-meta">
+          <strong>生效日期：</strong>2026年11月15日 &nbsp;|&nbsp; <strong>适用版本：</strong>v1.0 &nbsp;|&nbsp; <strong>官方支持邮箱：</strong><a href="mailto:fangdev1063@gmail.com">fangdev1063@gmail.com</a>
+        </div>
+
+        <h2>1. 隐私保护核心原则</h2>
+        <p>《开口游 TravelTalk》（Bundle ID：<code>com.devfang.traveltalk</code>，以下简称“本应用”）由独立开发者 Ce Fang 研发。我们坚持<strong>100% 端侧沙盒闭环与数据零收集原则</strong>，绝不收集、上传、存储或向任何第三方出售您的个人信息。</p>
+        <ul>
+          <li><strong>零账号体系：</strong>无需手机号、邮箱或第三方账号登录，下载即用。</li>
+          <li><strong>零广告与零第三方追踪 SDK：</strong>本应用未集成任何第三方商业广告 SDK、归因追踪器或用户行为统计工具（<code>NSPrivacyTracking = false</code>）。</li>
+          <li><strong>纯本地沙盒持久化：</strong>您设置的旅行护照偏好（同行人数、饮食过敏/忌口标签、选填称呼与出发地）、场景演练记录、收藏短语与自定义词条仅保存在您本机的 SwiftData 与 <code>UserDefaults</code> 应用沙盒内（严格遵循 Apple 隐私清单 <code>CA92.1</code> 规范）。</li>
+        </ul>
+
+        <h2>2. 麦克风、语音识别与离线翻译权限说明</h2>
+        <p>本应用在启动时绝不弹出任何权限请求；仅当您主动点击「跟读评测」或「双麦克风实时翻译」按钮时按需申请系统授权：</p>
+        <ul>
+          <li><strong>麦克风（Microphone）与语音识别（Speech Recognition）：</strong>仅通过 Apple 原生 <code>AVFoundation</code> 与端侧 <code>Speech</code> 框架在内存中进行实时发音比对与语音转文字，绝不会在后台录音，也不会将您的语音文件上传至任何开发者服务器。</li>
+          <li><strong>离线翻译（Translation）：</strong>优先使用 Apple 原生 iOS 18 <code>TranslationSession</code> 端侧离线模型及内置高频旅行词库完成无网翻译，最大限度守护您的对话隐私。</li>
+        </ul>
+
+        <h2>3. Apple StoreKit 2 交易安全</h2>
+        <p>本应用 v1.0 版本为 100% 纯享免费版本。未来版本若提供可选的扩展包或 StoreKit 2 内购服务，所有支付结算与恢复购买均由 Apple App Store 官方安全通道独立完成，开发者无法触达您的任何支付账户信息。</p>
+
+        <h2>4. 数据修改与彻底清除</h2>
+        <p>由于所有数据均保存在您的设备本地，您可随时在应用内修改或清空旅行护照档案、自定义短语与生词本；卸载本应用即可从 iOS 系统中彻底物理清除全部本地沙盒数据。</p>
+
+        <h2>5. 联系我们</h2>
+        <p>如您对本隐私政策有任何疑问或建议，请随时发送邮件至官方支持邮箱：<a href="mailto:fangdev1063@gmail.com"><strong>fangdev1063@gmail.com</strong></a>。</p>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    function setLang(lang) {
+      document.body.classList.toggle('lang-zh', lang === 'zh');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    }
+  </script>
+</body>
+</html>
