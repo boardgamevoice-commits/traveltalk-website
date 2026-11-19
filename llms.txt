@@ -1,0 +1,54 @@
+# TravelTalk: Speak & Translate
+
+> 100% offline iOS travel dialogue simulator, in-place menu allergy scanner, survival show cards, and two-way voice translator for Japan, France, and English trips.
+
+TravelTalk is an iPhone, iPad, and iPhone Duo app that helps travelers practice offline travel conversations, scan foreign menus with allergy alerts, and communicate via live voice translator and full-screen show cards — 100% offline with zero sign-ups and zero ads.
+
+## Key features
+
+- 9-Language Native Interface: Full UI localization across English, Simplified & Traditional Chinese, Japanese, Korean, German, French, Spanish, and Portuguese.
+- 1,389 Studio Neural Voice Recordings: Expanded offline audio coverage across all 23 interactive scenarios, Top 100 survival cheatsheet phrases, and 38 emergency show cards.
+- In-Place Menu Scanner & Allergy Guard: Translate foreign menus directly over the original photo with pinch-to-zoom, hold-to-compare, red allergen warnings, and 1-tap dish ordering cards.
+- Travel Map, Offline Taxi Cards & WeatherKit Tips: Pin hotels for 1-tap local-language taxi address cards, locate nearby stations or hospitals, and get weather-matched phrases.
+- Symmetrical Dual-Mic Live Voice Translator: On-device Speech Recognition and iOS 18 TranslationSession with built-in offline travel lexicon fallback.
+
+## Facts
+- Category: Travel / Education
+- Platform: iPhone / iPad / iPhone Duo (iOS 18.0+)
+- Bundled Offline Audio: 1,389 neural voice recordings across 23 scenarios, 100 cheatsheet phrases & 38 emergency show cards
+- Supported UI Languages: 9 (en, zh-Hans, zh-Hant, ja, ko, de, fr, es, pt-BR)
+- Price: Free ($0, zero ads, zero tracking, zero account required)
+
+## Links
+
+- [Download on the App Store](https://apps.apple.com/app/id6835293753)
+- [Official website](https://traveltalkapp.netlify.app/)
+- [Privacy policy](https://traveltalkapp.netlify.app/privacy)
+- [Terms of use](https://traveltalkapp.netlify.app/terms)
+- [Support](https://traveltalkapp.netlify.app)
+
+## FAQ
+
+### Does TravelTalk work 100% offline in airplane mode or foreign subways?
+
+Yes. TravelTalk bundles 1,389 studio-grade neural audio recordings across 23 branching travel scenarios, the Top 100 survival cheatsheet, and 38 full-screen emergency show cards right inside the app. Live two-way voice translation, VisionKit menu scanning, and saved hotel taxi cards all run on-device without Wi-Fi, roaming data, or user accounts.
+
+### How does the offline foreign menu scanner detect food allergies?
+
+Open Scan Menu in the Translator tab to point your camera or pick a menu photo. Apple VisionKit OCR and on-device translation render native-language stickers directly over the original menu photo while cross-checking your Travel Passport dietary tags—automatically flagging peanut, tree nut, shellfish, gluten, dairy, halal, vegetarian, cilantro, or spicy dishes in red.
+
+### Which destination languages and app interface languages does TravelTalk support?
+
+TravelTalk teaches and translates real-world travel conversations for Japanese (ja-JP), French (fr-FR), and English (en-US) destinations, while the app interface, phonetics, and survival meanings are 100% localized in 9 languages: English, Simplified Chinese, Traditional Chinese, Japanese, Korean, German, French, Spanish, and Brazilian Portuguese.
+
+### How do Full-Screen Show Cards and Offline Taxi Address Cards help when I cannot speak?
+
+Every survival phrase, allergy alert, and saved map place turns into a high-contrast Full-Screen Show Card displaying your mother-tongue confirmation on top and large local-language script below. Restaurant staff or taxi drivers can read the address, hear native neural audio, and tap structured reply buttons right on your screen.
+
+### Is TravelTalk free, and does it collect personal voice or location data?
+
+TravelTalk is free to download on the App Store with zero ads, zero account registration, and zero third-party tracking SDKs. All speech recognition, menu OCR, saved hotel pins, and Travel Passport preferences stay strictly inside your local iPhone, iPad, or iPhone Duo SwiftData sandbox.
+
+### Does TravelTalk support iPad and foldable iPhone Duo displays?
+
+Yes. TravelTalk is a Universal iOS 18+ app engineered with adaptive Boarding Pass layouts for iPhone, 13-inch iPad split workspaces, and iPhone Duo—featuring one-hand cover-screen show cards on the 5.4-inch outer display and crease-safe dual microphones on the 7.6-inch unfolded display.

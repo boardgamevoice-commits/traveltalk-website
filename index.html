@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TravelTalk (开口游) — Offline Travel Phrasebook, Dialogue Simulator & Voice Translator</title>
-  <meta name="description" content="Speak confidently in Japan, France, and English destinations 100% offline. 21 interactive travel scenarios, Top 100 survival cheatsheet, full-screen staff show cards, and two-way voice translation.">
-  <meta property="og:title" content="TravelTalk: Speak & Translate — v1.0 for iOS">
-  <meta property="og:description" content="100% offline travel conversation simulator, Top 100 survival phrasebook, dietary allergy show cards, and two-way voice translator.">
+  <title>TravelTalk (开口游) — Offline Travel Phrasebook, Menu Allergy Scanner &amp; Voice Translator</title>
+  <meta name="description" content="Speak confidently in Japan, France, and English destinations 100% offline. 23 interactive travel scenarios, 1,389 neural voices, in-place menu allergy scanner, taxi show cards, and two-way voice translation across 9 UI languages.">
+  <meta name="apple-itunes-app" content="app-id=6835293753">
+  <meta property="og:title" content="TravelTalk: Speak &amp; Translate — v1.1.0 for iOS">
+  <meta property="og:description" content="100% offline travel conversation simulator, in-place menu allergy scanner, Top 100 survival phrasebook, taxi show cards, and two-way voice translator.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://traveltalkapp.netlify.app">
   <meta property="og:image" content="https://traveltalkapp.netlify.app/assets/app_icon.png">
@@ -19,17 +20,84 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "TravelTalk: Speak & Translate",
-    "alternateName": "开口游 TravelTalk",
-    "operatingSystem": "iOS 18.0+",
-    "applicationCategory": "TravelApplication",
-    "softwareVersion": "1.0",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "MobileApplication",
+        "name": "TravelTalk: Speak & Translate",
+        "alternateName": "开口游 TravelTalk",
+        "description": "TravelTalk is an iPhone, iPad, and iPhone Duo app that helps travelers practice offline travel conversations, scan foreign menus with allergy alerts, and communicate via live voice translator and full-screen show cards — 100% offline with zero sign-ups and zero ads.",
+        "operatingSystem": "iOS 18.0+",
+        "applicationCategory": "TravelApplication",
+        "inLanguage": ["en", "zh-Hans", "zh-Hant", "ja", "ko", "de", "fr", "es", "pt-BR"],
+        "softwareVersion": "1.1.0",
+        "downloadUrl": "https://apps.apple.com/app/id6835293753",
+        "installUrl": "https://apps.apple.com/app/id6835293753",
+        "url": "https://traveltalkapp.netlify.app/",
+        "image": "https://traveltalkapp.netlify.app/assets/app_icon.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Ce Fang"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does TravelTalk work 100% offline in airplane mode or foreign subways?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. TravelTalk bundles 1,389 studio-grade neural audio recordings across 23 branching travel scenarios, the Top 100 survival cheatsheet, and 38 full-screen emergency show cards right inside the app. Live two-way voice translation, VisionKit menu scanning, and saved hotel taxi cards all run on-device without Wi-Fi, roaming data, or user accounts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the offline foreign menu scanner detect food allergies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open Scan Menu in the Translator tab to point your camera or pick a menu photo. Apple VisionKit OCR and on-device translation render native-language stickers directly over the original menu photo while cross-checking your Travel Passport dietary tags—automatically flagging peanut, tree nut, shellfish, gluten, dairy, halal, vegetarian, cilantro, or spicy dishes in red."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which destination languages and app interface languages does TravelTalk support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TravelTalk teaches and translates real-world travel conversations for Japanese (ja-JP), French (fr-FR), and English (en-US) destinations, while the app interface, phonetics, and survival meanings are 100% localized in 9 languages: English, Simplified Chinese, Traditional Chinese, Japanese, Korean, German, French, Spanish, and Brazilian Portuguese."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do Full-Screen Show Cards and Offline Taxi Address Cards help when I cannot speak?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every survival phrase, allergy alert, and saved map place turns into a high-contrast Full-Screen Show Card displaying your mother-tongue confirmation on top and large local-language script below. Restaurant staff or taxi drivers can read the address, hear native neural audio, and tap structured reply buttons right on your screen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is TravelTalk free, and does it collect personal voice or location data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TravelTalk is free to download on the App Store with zero ads, zero account registration, and zero third-party tracking SDKs. All speech recognition, menu OCR, saved hotel pins, and Travel Passport preferences stay strictly inside your local iPhone, iPad, or iPhone Duo SwiftData sandbox."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does TravelTalk support iPad and foldable iPhone Duo displays?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. TravelTalk is a Universal iOS 18+ app engineered with adaptive Boarding Pass layouts for iPhone, 13-inch iPad split workspaces, and iPhone Duo—featuring one-hand cover-screen show cards on the 5.4-inch outer display and crease-safe dual microphones on the 7.6-inch unfolded display."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -40,12 +108,13 @@
         <img src="assets/app_icon.png" alt="TravelTalk App Icon" class="brand-icon">
         <div class="brand-text">
           <span class="brand-title">TravelTalk <span data-lang-zh>开口游</span></span>
-          <span class="brand-sub">v1.0 · Offline Travel Companion</span>
+          <span class="brand-sub">v1.1.0 · 9-Language Offline Companion</span>
         </div>
       </a>
       <nav class="nav-links">
         <a href="#features"><span data-lang-en>Features</span><span data-lang-zh>核心亮点</span></a>
         <a href="#screens"><span data-lang-en>Screenshots</span><span data-lang-zh>应用预览</span></a>
+        <a href="#faq"><span data-lang-en>FAQ</span><span data-lang-zh>常见问题</span></a>
         <a href="/privacy"><span data-lang-en>Privacy</span><span data-lang-zh>隐私政策</span></a>
         <a href="/terms"><span data-lang-en>Terms</span><span data-lang-zh>服务条款</span></a>
       </nav>
@@ -63,7 +132,7 @@
       <div class="container hero-grid">
         <div>
           <div class="pill-row">
-            <span class="badge-pill">v1.0 Release · iOS 18+</span>
+            <span class="badge-pill">v1.1.0 Release · 9 Languages · iOS 18+</span>
             <span class="badge-pill coral"><span data-lang-en>100% Offline Ready</span><span data-lang-zh>100% 离线可用</span></span>
             <span class="badge-pill green"><span data-lang-en>Made for iPhone, iPad &amp; iPhone Duo</span><span data-lang-zh>适配 iPhone / iPad / iPhone Duo</span></span>
           </div>
@@ -74,8 +143,8 @@
           </h1>
 
           <p class="hero-lead">
-            <span data-lang-en>Rehearse 21 branching real-life scenarios with studio neural voices, flash Full-Screen Dietary &amp; Emergency Show Cards with tap-to-reply buttons for local staff, and converse effortlessly with our on-device Two-Way Voice Translator.</span>
-            <span data-lang-zh>集「21个高频场景双向对话预演 + 必背100句罗马音小抄 + 店员点选全屏救急卡 + 端侧双麦克风实时语音互译」于一体，零账号、零广告、零云端上传。</span>
+            <span data-lang-en>Rehearse 23 branching real-life scenarios with 1,389 studio neural voices, scan foreign menus in-place with automatic dietary allergy alerts, flash Full-Screen Taxi &amp; Emergency Show Cards, and converse via our on-device Two-Way Voice Translator.</span>
+            <span data-lang-zh>集「23个高频场景双向对话预演 + 外文菜单原图贴片翻译排雷 + 必背100句罗马音小抄 + 离线酒店打车/店员救急卡 + 双麦实时互译」于一体，支持9国母语界面，零账号、零广告、零云端上传。</span>
           </p>
 
           <div class="hero-cta-row">
@@ -91,19 +160,19 @@
 
           <div class="trust-strip">
             <div class="trust-stat">
-              <strong>21</strong>
+              <strong>23</strong>
               <span data-lang-en>Branching Scenarios</span>
               <span data-lang-zh>真实出境演练场景</span>
             </div>
             <div class="trust-stat">
-              <strong>234</strong>
+              <strong>1,389</strong>
               <span data-lang-en>Bundled Neural Voices</span>
               <span data-lang-zh>内置高清真声语音</span>
             </div>
             <div class="trust-stat">
-              <strong>0 KB</strong>
-              <span data-lang-en>Cloud Data Collected</span>
-              <span data-lang-zh>个人数据云端上传</span>
+              <strong>9 Langs</strong>
+              <span data-lang-en>Native UI · 0 KB Cloud</span>
+              <span data-lang-zh>全球母语 · 零云端上传</span>
             </div>
           </div>
         </div>
@@ -190,28 +259,28 @@
         <div class="bento-grid">
           <article class="bento-card">
             <div class="bento-icon">01</div>
-            <h3><span data-lang-en>Branching Dialogue Simulator</span><span data-lang-zh>21个真实场景双向对话树</span></h3>
+            <h3><span data-lang-en>23 Branching Dialogue Simulations</span><span data-lang-zh>23个真实场景双向对话树</span></h3>
             <p>
-              <span data-lang-en>Don't just memorize one line — hear how local waiters, clerks, and customs officers reply across polite &amp; casual branches, with 1.0x and 0.75x slow neural audio.</span>
-              <span data-lang-zh>不仅教你怎么说，更提前预演店员最常见的真实追问分支；内置234条高清离线语音，支持1.0x常速与0.75x慢速跟读打分。</span>
+              <span data-lang-en>Don't just memorize one line — hear how local waiters, clerks, and customs officers reply across polite &amp; casual branches, backed by 1,389 studio neural voices at 1.0x and 0.75x slow speed.</span>
+              <span data-lang-zh>不仅教你怎么说，更提前预演店员最常见的真实追问分支；内置1,389条高清离线语音，支持1.0x常速与0.75x慢速跟读打分。</span>
             </p>
           </article>
 
           <article class="bento-card">
             <div class="bento-icon">02</div>
-            <h3><span data-lang-en>Top 100 Cheatsheet &amp; Show Cards</span><span data-lang-zh>必背100句小抄与全屏救急卡</span></h3>
+            <h3><span data-lang-en>In-Place Menu Scanner &amp; Show Cards</span><span data-lang-zh>拍外文菜单排雷与全屏救急卡</span></h3>
             <p>
-              <span data-lang-en>100 atomic 4–8 word phrases with Romaji and phonetic guides. Flip any card full-screen in noisy venues so local staff can read and tap a reply button directly.</span>
-              <span data-lang-zh>一句一卡短句编排搭配罗马音与谐音助记；嘈杂环境下轻点切换高对比度全屏大字卡，支持当地店员直接点击按钮回复。</span>
+              <span data-lang-en>Overlay native translations right over foreign menu photos with red allergy alerts, or flip any of the Top 100 phrases &amp; saved hotels into Full-Screen Taxi &amp; Staff Tap-to-Reply Show Cards.</span>
+              <span data-lang-zh>拍菜单直接在原图覆盖母语译文并标红花生海鲜过敏原；必背100句与收藏酒店一键生成全屏大字打车卡与店员点选回复卡。</span>
             </p>
           </article>
 
           <article class="bento-card">
             <div class="bento-icon">03</div>
-            <h3><span data-lang-en>Symmetrical Dual-Mic Translator</span><span data-lang-zh>单手双麦克风端侧实时互译</span></h3>
+            <h3><span data-lang-en>Dual-Mic Translator &amp; 9 UI Languages</span><span data-lang-zh>双麦实时互译与9国母语界面</span></h3>
             <p>
-              <span data-lang-en>Thumb-zone dual microphones powered by Apple on-device Speech Recognition, iOS 18 TranslationSession, and our deterministic offline travel lexicon.</span>
-              <span data-lang-zh>底部人体工学对称双麦（「我说母语 / 对方说外语」），融合 iOS 18 离线翻译引擎与内置高频旅行词库双轨兜底。</span>
+              <span data-lang-en>Thumb-zone dual microphones powered by Apple on-device Speech Recognition and iOS 18 TranslationSession, natively localized across EN, 简/繁, JA, KO, DE, FR, ES, and PT-BR.</span>
+              <span data-lang-zh>底部人体工学对称双麦融合 iOS 18 离线翻译与内置高频旅行词库，全面原生支持中英日韩德法西葡9种语言。</span>
             </p>
           </article>
         </div>
@@ -251,12 +320,58 @@
         </div>
       </div>
     </section>
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>
+            <span data-lang-en>Frequently Asked Questions</span>
+            <span data-lang-zh>常见问题解答 (FAQ)</span>
+          </h2>
+          <p>
+            <span data-lang-en>Clear facts on offline capability, dietary allergy safety, device support, and on-device privacy.</span>
+            <span data-lang-zh>关于飞行模式离线能力、菜单过敏原排查、设备支持与隐私安全的权威说明。</span>
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-lang-en>Does TravelTalk work 100% offline in airplane mode or foreign subways?</span><span data-lang-zh>开口游 TravelTalk 在飞行模式或海外地铁没信号时可以 100% 离线使用吗？</span></summary>
+            <p><span data-lang-en>Yes. TravelTalk bundles 1,389 studio-grade neural audio recordings across 23 branching travel scenarios, the Top 100 survival cheatsheet, and 38 full-screen emergency show cards right inside the app. Live two-way voice translation, VisionKit menu scanning, and saved hotel taxi cards all run on-device without Wi-Fi, roaming data, or user accounts.</span><span data-lang-zh>可以。应用安装包内直接内置了 1,389 条高清神经网络真声录音，完整覆盖 23 个真实出境对话场景、必背 100 句罗马音小抄与 38 张全屏救急展示卡；端侧双麦克风语音互译、拍照扫外文菜单与离线酒店打车卡均在手机本地运行，无需流量卡、漫游网络或注册登录。</span></p>
+          </details>
+
+          <details class="faq-item">
+            <summary><span data-lang-en>How does the offline foreign menu scanner detect food allergies?</span><span data-lang-zh>扫外文菜单原图翻译是如何自动排查花生、海鲜等饮食过敏原的？</span></summary>
+            <p><span data-lang-en>Open Scan Menu in the Translator tab to point your camera or pick a menu photo. Apple VisionKit OCR and on-device translation render native-language stickers directly over the original menu photo while cross-checking your Travel Passport dietary tags—automatically flagging peanut, tree nut, shellfish, gluten, dairy, halal, vegetarian, cilantro, or spicy dishes in red.</span><span data-lang-zh>在「实时翻译」页点击「扫外文菜单」拍照或导入相册菜单，系统通过端侧 VisionKit 文字识别在原图菜名位置直接贴片覆盖母语译文，并自动比对您在「旅行护照」勾选的 8 类忌口标签（花生坚果、海鲜甲壳、麸质、乳糖、素食、清真、免香菜、免辣），高危菜品即时红框预警，点击即可弹出全屏点菜确认卡。</span></p>
+          </details>
+
+          <details class="faq-item">
+            <summary><span data-lang-en>Which destination languages and app interface languages does TravelTalk support?</span><span data-lang-zh>目前支持哪些旅游目的地语言和界面母语？</span></summary>
+            <p><span data-lang-en>TravelTalk teaches and translates real-world travel conversations for Japanese (ja-JP), French (fr-FR), and English (en-US) destinations, while the app interface, phonetics, and survival meanings are 100% localized in 9 languages: English, Simplified Chinese, Traditional Chinese, Japanese, Korean, German, French, Spanish, and Brazilian Portuguese.</span><span data-lang-zh>目的地口语演练与离线真声覆盖日语（日本自由行）、法语（法国及法语区）与英语三大高频出境语种；应用界面、释义与系统权限已 100% 原生支持简体中文、繁体中文、英语、日语、韩语、德语、法语、西班牙语与葡萄牙语共 9 种语言。</span></p>
+          </details>
+
+          <details class="faq-item">
+            <summary><span data-lang-en>How do Full-Screen Show Cards and Offline Taxi Address Cards help when I cannot speak?</span><span data-lang-zh>听不懂店员说话或打车去酒店时，全屏救急卡和乘车大字卡怎么用？</span></summary>
+            <p><span data-lang-en>Every survival phrase, allergy alert, and saved map place turns into a high-contrast Full-Screen Show Card displaying your mother-tongue confirmation on top and large local-language script below. Restaurant staff or taxi drivers can read the address, hear native neural audio, and tap structured reply buttons right on your screen.</span><span data-lang-zh>任意短语、防过敏名片及地图收藏的酒店景点均可一键放大为高对比度全屏展示卡：顶部显示您的母语原意核对，中央超大字号展示地道当地语言与地址，支持播放离线真声，底部附带结构化回复按钮供当地店员或出租车司机直接在屏幕上点击作答。</span></p>
+          </details>
+
+          <details class="faq-item">
+            <summary><span data-lang-en>Is TravelTalk free, and does it collect personal voice or location data?</span><span data-lang-zh>开口游是否免费？录音、照片和定位数据会上传云端吗？</span></summary>
+            <p><span data-lang-en>TravelTalk is free to download on the App Store with zero ads, zero account registration, and zero third-party tracking SDKs. All speech recognition, menu OCR, saved hotel pins, and Travel Passport preferences stay strictly inside your local iPhone, iPad, or iPhone Duo SwiftData sandbox.</span><span data-lang-zh>《开口游 TravelTalk》免费下载使用，零第三方广告、零强制注册、零数据追踪。您的语音跟读、菜单照片识别、收藏地点与旅行护照档案 100% 存储在设备本地沙盒中，绝不上传任何外部服务器。</span></p>
+          </details>
+
+          <details class="faq-item">
+            <summary><span data-lang-en>Does TravelTalk support iPad and foldable iPhone Duo displays?</span><span data-lang-zh>是否支持 iPad 大屏和 iPhone Duo 折叠双屏？</span></summary>
+            <p><span data-lang-en>Yes. TravelTalk is a Universal iOS 18+ app engineered with adaptive Boarding Pass layouts for iPhone, 13-inch iPad split workspaces, and iPhone Duo—featuring one-hand cover-screen show cards on the 5.4-inch outer display and crease-safe dual microphones on the 7.6-inch unfolded display.</span><span data-lang-zh>全面支持。应用采用温暖纸质登机牌美学与夜航深色模式，原生适配 iPhone、iPad 全尺寸分栏及 iPhone Duo 折叠双屏（5.4 英寸外屏单手亮出救急卡，7.6 英寸展开内屏宽幅演练对话并避让折痕）。</span></p>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <strong>TravelTalk: Speak &amp; Translate (开口游) · v1.0</strong>
+        <strong>TravelTalk: Speak &amp; Translate (开口游) · v1.1.0</strong>
         <div style="margin-top: 4px;">
           <span data-lang-en>100% On-Device Sandbox · Zero Ads · Zero Data Collection · Support: </span>
           <span data-lang-zh>100% 设备端沙盒运行 · 无广告 · 零数据收集 · 官方支持邮箱：</span>
